@@ -8,62 +8,106 @@ The number of cookies to make depends on the hours (6:00 AM to 8:00 PM) and a fe
 --Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
 --Store the results for each location in a separate array... perhaps as a property of the object representing that location
 --Display the values of each array as unordered lists in the browser
+--Calculate the sum of these hourly totals */
 
-Calculating the sum of these hourly totals; your output for each location should look like this:
-
-1st and Pike
-
-6am: 16 cookies
-7am: 20 cookies
-8am: 35 cookies
-...
-8pm: 29 cookies
-Total: 657 cookies*/
 
 "use strict";
 
 var airportLoc = {
+    name: 'PDX Airport',
     minHourlyCust: 23,
     maxHourlyCust: 65,
     avgCookiesPerCust: 6.3,
     result: [],
     
-    getRandom: function (minHourlyCust, maxHourlyCust) {
-
-        Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust;
-    },
-
-    getResults: function ( xxx ) {
-        this.result.push ( xxx );
+    getRandom: function () {
+        var randomCookies = (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust) * this.avgCookiesPerCust;
+        this.result.push(Math.round(randomCookies));
     }
 };
 
-/*
 var pioneerLoc = {
+    name: 'Pioneer Square',
     minHourlyCust: 3,
     maxHourlyCust: 24,
     avgCookiesPerCust: 1.2,
-    results: [] 
+    result: [],
+    
+    getRandom: function () {
+        var randomCookies = (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust) * this.avgCookiesPerCust;
+        this.result.push(Math.round(randomCookies));
+    }
 };
 
 var powellLoc = {
+    name: 'Powells',
     minHourlyCust: 11,
     maxHourlyCust: 38,
     avgCookiesPerCust: 3.7,
-    results: [] 
+    result: [],
+    
+    getRandom: function () {
+        var randomCookies = (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust) * this.avgCookiesPerCust;
+        this.result.push(Math.round(randomCookies));
+    }
 };
 
 var stJohnsLoc = {
+    name: 'Saint Johns',
     minHourlyCust: 20,
     maxHourlyCust: 38,
     avgCookiesPerCust: 2.3,
-    results: [] 
+    result: [],
+    
+    getRandom: function () {
+        var randomCookies = (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust) * this.avgCookiesPerCust;
+        this.result.push(Math.round(randomCookies));
+    } 
 };
 
 var waterFrontLoc = {
+    name: 'Water Front',
     minHourlyCust: 2,
     maxHourlyCust: 16,
     avgCookiesPerCust: 4.6,
-    results: [] 
+    result: [],
+    
+    getRandom: function () {
+        var randomCookies = (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust)) + this.minHourlyCust) * this.avgCookiesPerCust;
+        this.result.push(Math.round(randomCookies));
+    } 
 };
-*/
+
+function displayResult( loc ) {
+
+    var section = document.createElement('section');
+    var header = document.createElement('h2');
+
+    var container = document.getElementById('container');
+    container.appendChild(section);
+    
+    header.innerText = loc.name;
+    section.appendChild(header);
+
+    var ul = document.createElement('ul');
+    section.appendChild(ul);
+
+    var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+    for (var i = 0, total = 0; i < times.length; i++) {
+        loc.getRandom();
+        total += loc.result[i];
+        var li = document.createElement('li');
+        li.innerText = times[i] + ': ' + loc.result[i] + ' cookies';
+        ul.appendChild(li);
+    }
+
+    li.innerText = 'total: ' + total;
+    ul.appendChild( li );
+}
+
+displayResult( airportLoc );
+displayResult( pioneerLoc );
+displayResult( powellLoc );
+displayResult( stJohnsLoc );
+displayResult( waterFrontLoc );
