@@ -54,6 +54,7 @@ function createCell(cellType, content, row) { //helper function
     var cell = document.createElement(cellType);
     cell.innerText = content;
     row.appendChild(cell);
+    //try using xxx.setAttribute('id','tr'+1);
 }
 
 displayResult( airport );
