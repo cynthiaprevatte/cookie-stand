@@ -44,12 +44,16 @@ function addStoreHandler () {
     var form = event.target;
 
     var name = form.name.value;
-    var minHourlyCust = form.minHourlyCust.value;
-    var maxHourlyCust = form.maxHourlyCust.value;
-    var avgCookiesPerCust = form.avgCookiesPerCust.value;
+    var minHourlyCust = parseInt( form.minHourlyCust.value );
+    var maxHourlyCust = parseInt( form.maxHourlyCust.value );
+    var avgCookiesPerCust = parseInt( form.avgCookiesPerCust.value );
     var newStore = new Store(name, minHourlyCust, maxHourlyCust, avgCookiesPerCust);
-    console.log (form, name, minHourlyCust, maxHourlyCust, avgCookiesPerCust, newStore);
-    //name.render( document.getElementById( 'cookies' ) ); 
+
+    console.log( name, minHourlyCust, maxHourlyCust, avgCookiesPerCust, newStore);
+
+    stores.push( name );
+    console.log( stores );
+    name.render( document.getElementById( 'cookies' ) ); 
 }
 
 function displayResult( loc ) { //table
@@ -62,7 +66,7 @@ function displayResult( loc ) { //table
     tableElement.appendChild( tableRowHeader );
     // add data to the table
     loc.render( document.getElementById( 'cookies' ) ); 
-    console.log (loc);
+    console.log( loc);
 }
 
 function createCell(cellType, content, row) { //helper function
@@ -80,6 +84,7 @@ displayResult( waterFront );
 
 var storeForm = document.getElementById( 'addStore' );
 storeForm.addEventListener( 'submit', addStoreHandler);
+storeForm.addEventListener( 'submit', console.log( stores ));
 
 /*
 A table is drawn out row by row. Each row is created
