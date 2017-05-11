@@ -3,6 +3,10 @@
 	<head>
 		<title>Salmon Cookies</title>
         <style>
+            fieldset > * {
+                display: block;
+            }
+
             table {
                 empty-cells: show;
             }
@@ -14,9 +18,32 @@
 	</head>
 	<body>
         <h1>Cookies</h1>
+     <!-- use an event handler in app.js and update the dom with the input-->
+        <form id="addStore" action="#">
+            <fieldset>
+                <label for="name">new store name</label>
+                <input id = "name" type="text"></input>
+                
+                <label for="minHourlyCust">minimum hourly customers</label>
+                <input id = "minHourlyCust" type="number" step="any"></input>
+                
+                <label for="maxHourlyCust">maximum hourly customers</label>
+                <input id = "maxHourlyCust" type="number" step="any"></input>
+
+                <label for="avgCookiesPerCust">average cookies per customer</label>
+                <input id = "avgCookiesPerCust" type="number" step="any"></input>         
+            </fieldset>
+
+            <fieldset>
+                <input type="submit" value="Add to Table"></input>
+            </fieldset>
+        </form>
+        <section id="zoo"></section>
+
         <div id = "container"></div>
         <table id = 'cookies'>
         </table>
+
         <script src="./js/app.js"></script>
 	</body>
 </html>
