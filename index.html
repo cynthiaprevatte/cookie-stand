@@ -8,17 +8,20 @@
             }
 
             table {
+                border: 1px solid gray;
+                padding: 5px;
                 empty-cells: show;
             }
             td {
                 border: 1px solid gray;
                 padding: 5px;
+                empty-cells: show;
             }
         </style>
 	</head>
 	<body>
         <h1>Cookies</h1>
-     <!-- use an event handler in app.js and update the dom with the input-->
+    <!-- use an event handler in app.js and update the dom with the input-->
         <form id="addStore" action="#">
             <fieldset>
                 <label for="name">new store name</label>
@@ -38,11 +41,9 @@
                 <input type="submit" value="Add to Table"></input>
             </fieldset>
         </form>
-        <section id="zoo"></section>
-
+        
         <div id = "container"></div>
-        <table id = 'cookies'>
-        </table>
+        <table id = 'cookies'></table>
 
         <script src="./js/app.js"></script>
 	</body>
