@@ -6,13 +6,16 @@
             fieldset > * {
                 display: block;
             }
-
-            table {
+            th {
+                background-color: salmon;
+                font-family: Arial, Verdana, sans-serif; 
+                color: blue;
                 border: 1px solid gray;
                 padding: 5px;
                 empty-cells: show;
             }
             td {
+                background-color: lightblue;
                 border: 1px solid gray;
                 padding: 5px;
                 empty-cells: show;
@@ -20,10 +23,16 @@
         </style>
 	</head>
 	<body>
-        <h1>Cookies</h1>
+        <h1>Salmon Cookies</h1>
+        <img src="./images/fish.jpg" alt="fish" width="220" height="140"> </a>
+        <img src="./images/frosted-cookie.jpg" alt="cookie" width="220" height="140"> </a>
+        <img src="./images/cutter.jpeg" alt="cookie cutter" width="220" height="140"> </a>
+        <img src="./images/family.jpg" alt="family"width="180" height="140"> </a>
+        <img src="./images/shirt.jpg" alt="family"width="175" height="140"> </a>
     <!-- use an event handler in app.js and update the dom with the input-->
         <form id="addStore" action="#">
             <fieldset>
+                <img src="./images/chinook.jpg" alt="fish" width="400" height="100"> </a>
                 <label for="name">new store name</label>
                 <input id = "name" type="text"></input>
                 
@@ -40,6 +49,7 @@
             <fieldset>
                 <input type="submit" value="Add to Table"></input>
             </fieldset>
+            <img src="./images/salmon.png" alt="fish" width="500" height="100"> </a>
         </form>
         
         <div id = "container"></div>
