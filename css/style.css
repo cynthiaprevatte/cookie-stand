@@ -1,42 +1,18 @@
-body {
-    background-color: lightblue;
-    padding: 50px;
-    font-family: Arial, Verdana, sans-serif;
-    color: red;
-    font-size: 24px;
-    }
-
-div.box {
-
-    background-color: black;
-    border-width: thick;
-}
-
-p {
-    width: 250px;
-    border: 3px solid #0088dd;
-}
-
-h1 {
-    background-color: violet;
-    font-family: Arial, Verdana, sans-serif; 
-    color: blue;
-    padding: inherit;
-    font-size: 200%;
-    font-weight: bold;
-    text-decoration: underline;
-    letter-spacing: 0.9em;
-    }
-
-ol {
-    font-family: Arial, Verdana, sans-serif;
-    background-color: violet;
-    color: blueviolet;
-    
-    }
-ul {
-    font-family: Arial, Verdana, sans-serif;
-    background-color: violet;
-    color: blue;
-
-    }
+ fieldset>* {
+            display: block;
+        }
+        th {
+            background-color: salmon;
+            font-family: Arial, Verdana, sans-serif;
+            color: blue;
+            border: 1px solid gray;
+            padding: 5px;
+            empty-cells: show;
+        }
+        
+        td {
+            background-color: lightblue;
+            border: 1px solid gray;
+            padding: 5px;
+            empty-cells: show;
+        }

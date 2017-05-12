@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset="utf-8" />
 		<title>Salmon Cookies</title>
-        <style>
-            fieldset > * {
-                display: block;
-            }
+        <link href="./css/style.css" rel="stylesheet">
 
-            table {
-                border: 1px solid gray;
-                padding: 5px;
-                empty-cells: show;
-            }
-            td {
-                border: 1px solid gray;
-                padding: 5px;
-                empty-cells: show;
-            }
-        </style>
 	</head>
 	<body>
-        <h1>Cookies</h1>
-    <!-- use an event handler in app.js and update the dom with the input-->
-        <form id="addStore" action="#">
-            <fieldset>
-                <label for="name">new store name</label>
-                <input id = "name" type="text"></input>
-                
-                <label for="minHourlyCust">minimum hourly customers</label>
-                <input id = "minHourlyCust" type="number" step="any"></input>
-                
-                <label for="maxHourlyCust">maximum hourly customers</label>
-                <input id = "maxHourlyCust" type="number" step="any"></input>
+        <p>
+        <a href="index.html">Home</a> | <a href="sales.html">Sales</a>
+    </p>
 
-                <label for="avgCookiesPerCust">average cookies per customer</label>
-                <input id = "avgCookiesPerCust" type="number" step="any"></input>         
-            </fieldset>
+        <h1>Salmon Cookies</h1>
+        <img src="./images/fish.jpg" alt="fish" width="220" height="140"> </a>
+        <img src="./images/frosted-cookie.jpg" alt="cookie" width="220" height="140"> </a>
+        <img src="./images/cutter.jpeg" alt="cookie cutter" width="220" height="140"> </a>
+        <img src="./images/family.jpg" alt="family"width="180" height="140"> </a>
+        <img src="./images/shirt.jpg" alt="family"width="175" height="140"> </a>
+    <p>
+        <br/>
+        Hours: Monday through Saturday from 6am - 9pm<br/><br/>
 
-            <fieldset>
-                <input type="submit" value="Add to Table"></input>
-            </fieldset>
-        </form>
+        Salmon Cookies, Inc.<br/>
+        1234 SE 5th Street<br/>
+        Portland, Or, 97214<br/><br/>
+
+        Questions? Contact the webmaster at
+        <a href="mailto:cynthiaprevatte@gmail.com">cynthiaprevatte@gmail.com</a>.
+    </p>
         
-        <div id = "container"></div>
-        <table id = 'cookies'></table>
-
-        <script src="./js/app.js"></script>
 	</body>
 </html>
