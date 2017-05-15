@@ -3,41 +3,43 @@
 
 <head>
     <title>Salmon Cookies</title>
-        <link href="./css/style.css" rel="stylesheet">
-       
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
     <p>
         <a href="index.html">Home</a> | <a href="sales.html">Sales</a>
     </p>
-    <h1>Salmon Cookie Sales Per Store</h1>
+        <h1>Salmon Cookie Sales Per Store</h1>
+        <img src="./images/salmon.png" alt="fish" width="500" height="100"> </a>
+        <br/><br/>
+
+    <div id="container"></div>
+    <table id='cookies'></table>
+    <br/><br/>
+
+    <h1>Add A New Store</h1>
 
     <form id="addStore" action="#">
         <fieldset>
             <img src="./images/chinook.jpg" alt="fish" width="400" height="100"> </a>
+            <br/>
             <label for="name">new store name</label>
             <input id="name" type="text"></input>
-
+            <br/>
             <label for="minHourlyCust">minimum hourly customers</label>
             <input id="minHourlyCust" type="number" step="any"></input>
-
+            <br/>
             <label for="maxHourlyCust">maximum hourly customers</label>
             <input id="maxHourlyCust" type="number" step="any"></input>
-
+            <br/>
             <label for="avgCookiesPerCust">average cookies per customer</label>
             <input id="avgCookiesPerCust" type="number" step="any"></input>
-        </fieldset>
-
-        <fieldset>
+            <br/>
             <input type="submit" value="Add to Table"></input>
+            <br/>
         </fieldset>
-        <img src="./images/salmon.png" alt="fish" width="500" height="100"> </a>
     </form>
-
-    <div id="container"></div>
-    <table id='cookies'></table>
-
     <script src="./js/app.js"></script>
 </body>
 

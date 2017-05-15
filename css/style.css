@@ -1,18 +1,26 @@
- fieldset>* {
-            display: block;
-        }
-        th {
-            background-color: salmon;
-            font-family: Arial, Verdana, sans-serif;
-            color: blue;
-            border: 1px solid gray;
-            padding: 5px;
-            empty-cells: show;
-        }
-        
-        td {
-            background-color: lightblue;
-            border: 1px solid gray;
-            padding: 5px;
-            empty-cells: show;
-        }
+* {
+    font-family: Arial, Verdana, sans-serif;}
+body {
+    display: block;
+    margin-left: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color:  pink;}
+table {
+    border-spacing: 5px;
+}
+h1 {
+    text-align: center;}
+th {
+    background-color: salmon;
+
+    color: blue;
+    border: 1px solid gray;
+    padding: 5px;
+    empty-cells: show;}
+
+td {
+    background-color: lightgrey;
+    border: 1px solid gray;
+    padding: 5px;
+    empty-cells: show;}
